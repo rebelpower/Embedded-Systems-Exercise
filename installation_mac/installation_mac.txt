@@ -11,12 +11,8 @@ avr toolchain:
 	avr-size
 	avrdude
 
-ceedling:
-	ruby
-	ceedling
-
 for debugging and integration tests:
-	python 2.7
+	python 3
 
 Installation:
 	homebrew:
@@ -30,11 +26,7 @@ Installation:
 		brew install avr-libc
 		brew install avrdude --with-usb
 
-	ceedling:
-		brew install ruby
-		gem install ceedling
-
 	python:
-		https://www.python.org/downloads/release/python-2715/
+		https://www.python.org
 
-For Mac support ask questions in moodle, or write an E-Mail to my colleague alwyn.burger@uni-due.de
+For Mac support ask questions in moodle.

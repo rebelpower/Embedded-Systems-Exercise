@@ -14,25 +14,16 @@ avr toolchain:
 	avr-size
 	avrdude
 
-ceedling:
-	ruby
-	ceedling
-
 for debugging and integration tests:
-	python 2.7
+	python 3
 
 make and gcc: 
 	sudo apt-get install build-essential
 avr toolchain:
 	sudo apt-get install avr-libc binutils-avr gcc-avr avrdude
 
-ceedling:
-	ruby:
-		sudo apt-get install ruby 
-	gem install ceedling
-
 Python:
-	sudo apt-get install python2.7 python-pip
+	sudo apt install python3-pip python3
 
 Optional:
 	terminal editor:

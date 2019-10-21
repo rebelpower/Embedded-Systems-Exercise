@@ -35,24 +35,8 @@ Install avr-gcc and avrdude:
 	Restart MinGW so that the installation takes effect
 	Check if installation works by running: avr-gcc --version
 
-Install test environment Ceedling
-	open MinGW
-	install ruby: pacman -S ruby
-		Check the version of ruby with: ruby --version
-	install ceedling via gem: gem install ceedling
-	This can currently take multiple minutes and can appear like it hangs. Let it run until successfull or it fails
-
-	edit .bashrc file so that it can be executed from anywhere: nano ~/.bashrc
-	Add the following 2 lines at the end of the file: 
-PATH=$PATH:/home/$USER/.gem/ruby/2.4.0/gems/ceedling-0.28.3/bin/
-PATH=$PATH:/home/Saphieron/.gem/ruby/2.4.0/bin/
-export PATH
-	edit the version number of ruby or ceedling according to your installation
-	Close MinGW so the changes take effect
-	Check if installation works by running: ceedling
-
 Debugging tools:
-	Download the latest python 2.7 version: https://www.python.org/downloads/release/python-2715/
+	Download the latest python3 version: https://www.python.org
 	test by running from the windows console: python --version
 
 To create an exercise source code project folder:

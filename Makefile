@@ -159,7 +159,6 @@ makeExecutable:
 clean : 
 	rm -rf $(BUILD_DIR) ; \
 	rm -rf $(BUILD_DIR_LOCAL); \
-	cd $(CEEDLING_FOLDER) ; ceedling clobber ; cd ..
 
 compile : $(BUILD_DIR)/$(SOURCES_DIRS) | $(BUILD_DIR)/deployment.elf
 
@@ -169,7 +168,7 @@ runLocal: compileLocal | makeExecutable
 	$(BUILD_DIR_LOCAL)/localTest
 
 createProjectFolder:
-	ceedling new $(CEEDLING_PROJECT_PREFIX)_$(CURRENT_DIR_NAME)
+	mkdir -p $(CEEDLING_PROJECT_PREFIX)_$(CURRENT_DIR_NAME)/src
 
 size: $(BUILD_DIR)/deployment.elf
 	$(AVRSIZE) -C --mcu=$(MCU) $<
