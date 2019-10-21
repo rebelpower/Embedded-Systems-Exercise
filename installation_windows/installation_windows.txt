@@ -1,0 +1,62 @@
+Install MSYS2:
+	https://www.msys2.org/
+	installs an *nix like environment for windows
+
+Install VS Code:
+	https://code.visualstudio.com/
+	Useful extensions:
+		C/C++ 
+		C++ Intellisense
+
+Install the compilation tools for make and GCC:
+	open MinGW
+	execute: pacman -S --needed base-devel mingw-w64-i686-toolchain mingw-w64-x86_64-toolchain
+	execute: pacman -S nano
+
+	Check installation by executing:
+		gcc --version
+		make --version
+
+Install git bash for windows:
+	https://gitforwindows.org/
+
+Install avr-gcc and avrdude:
+	Use git to clone the installation scripts:
+	open Git bash:
+		make a git directory
+		execute: 
+			git clone http://bitbucket.es.uni-due.de:7990/scm/tem/embedded-systems-exercise.git
+	This creates a directory called "embedded-systems-exercise"
+	
+	open MinGW
+		Navigate to the cloned repository directory
+		enter <Path To Repo>/embedded-systems-exercise/installation_windows/
+		execute: ./msys2_install.sh
+	Restart MinGW so that the installation takes effect
+	Check if installation works by running: avr-gcc --version
+
+Install test environment Ceedling
+	open MinGW
+	install ruby: pacman -S ruby
+		Check the version of ruby with: ruby --version
+	install ceedling via gem: gem install ceedling
+	This can currently take multiple minutes and can appear like it hangs. Let it run until successfull or it fails
+
+	edit .bashrc file so that it can be executed from anywhere: nano ~/.bashrc
+	Add the following 2 lines at the end of the file: 
+PATH=$PATH:/home/$USER/.gem/ruby/2.4.0/gems/ceedling-0.28.3/bin/
+PATH=$PATH:/home/Saphieron/.gem/ruby/2.4.0/bin/
+export PATH
+	edit the version number of ruby or ceedling according to your installation
+	Close MinGW so the changes take effect
+	Check if installation works by running: ceedling
+
+Debugging tools:
+	Download the latest python 2.7 version: https://www.python.org/downloads/release/python-2715/
+	test by running from the windows console: python --version
+
+To create an exercise source code project folder:
+	Copy the Makefile to an empty folder of your likeing
+	open mingw and navigate to it
+	run: make createProjectFolder
+

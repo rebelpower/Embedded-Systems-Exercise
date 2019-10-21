@@ -1,0 +1,41 @@
+This assumes a ubuntu based distribution and having apt-get
+For other linux distros please consider checking which packages contain the above mentioned tools
+
+The programs required for this project are:
+
+gcc and make:
+	gcc
+	make
+
+avr toolchain:
+	avr-gcc
+	avr-objcopy
+	avr-objdump
+	avr-size
+	avrdude
+
+ceedling:
+	ruby
+	ceedling
+
+for debugging and integration tests:
+	python 2.7
+
+make and gcc: 
+	sudo apt-get install build-essential
+avr toolchain:
+	sudo apt-get install avr-libc binutils-avr gcc-avr avrdude
+
+ceedling:
+	ruby:
+		sudo apt-get install ruby 
+	gem install ceedling
+
+Python:
+	sudo apt-get install python2.7 python-pip
+
+Optional:
+	terminal editor:
+	nano: sudo apt-get install nano
+
+The makefile assumes that all above mentioned programs are found in the system path.

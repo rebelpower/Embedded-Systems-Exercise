@@ -1,0 +1,40 @@
+The programs required for this project are:
+
+gcc and make:
+	gcc
+	make
+
+avr toolchain:
+	avr-gcc
+	avr-objcopy
+	avr-objdump
+	avr-size
+	avrdude
+
+ceedling:
+	ruby
+	ceedling
+
+for debugging and integration tests:
+	python 2.7
+
+Installation:
+	homebrew:
+		https://brew.sh/index_de
+
+	gcc and make:
+		Install xcode and xcode 
+		xcode-select --install
+
+	avr toolchain:
+		brew install avr-libc
+		brew install avrdude --with-usb
+
+	ceedling:
+		brew install ruby
+		gem install ceedling
+
+	python:
+		https://www.python.org/downloads/release/python-2715/
+
+For Mac support ask questions in moodle, or write an E-Mail to my colleague alwyn.burger@uni-due.de
