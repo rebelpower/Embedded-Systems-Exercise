@@ -25,7 +25,7 @@ Install avr-gcc and avrdude:
 	open Git bash:
 		make a git directory
 		execute: 
-			git clone http://bitbucket.es.uni-due.de:7990/scm/tem/embedded-systems-exercise.git
+			git clone https://github.com/es-ude/Embedded-Systems-Exercise.git
 	This creates a directory called "embedded-systems-exercise"
 	
 	open MinGW

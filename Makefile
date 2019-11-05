@@ -183,16 +183,16 @@ programStk500v2 : $(BUILD_DIR)/deployment.hex
 	$(AVRDUDE) -c stk500v2 -p $(MCU) -V $(PROGRAMMER_ARGS_STK) -U flash:w:$<
 
 debugWiring : programWiring
-	python support_files/serial_echo.py $(SERIAL_PORT_DEBUG) $(BAUD_SERIAL)
+	python serial_echo.py $(SERIAL_PORT_DEBUG) $(BAUD_SERIAL)
 
 debugArduino: programArduino
-	python support_files/serial_echo.py $(SERIAL_PORT_DEBUG) $(BAUD_SERIAL)
+	python serial_echo.py $(SERIAL_PORT_DEBUG) $(BAUD_SERIAL)
 
 debugStk500v2 : programStk500v2
-	python support_files/serial_echo.py $(SERIAL_PORT_DEBUG_STK500v2) $(BAUD_SERIAL)
+	python serial_echo.py $(SERIAL_PORT_DEBUG_STK500v2) $(BAUD_SERIAL)
 
 runSerial: 
-	python support_files/serial_echo.py $(SERIAL_PORT_DEBUG) $(BAUD_SERIAL)
+	python serial_echo.py $(SERIAL_PORT_DEBUG) $(BAUD_SERIAL)
 
 $(BUILD_DIR)/$(SOURCES_DIRS) :
 	mkdir -p $@
