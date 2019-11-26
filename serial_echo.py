@@ -10,7 +10,7 @@ ser = serial.Serial(sys.argv[1], sys.argv[2])
 
 try:
 	while True:
-		sys.stdout.write(ser.read(1).decode(sys.stdout.encoding))
+		sys.stdout.write(ser.read(1).decode(encoding="ISO-8859-1"))
 		sys.stdout.flush()
 except KeyboardInterrupt:
 	print("key exc")
