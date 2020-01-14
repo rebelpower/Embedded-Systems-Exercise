@@ -35,9 +35,7 @@ uint8_t currentCursorPositionRows;
 //
 // Note, however, that resetting the MCU doesn't reset the LCD, so we
 // can't assume that its in that state when the library starts.
-#include "uartDriver.h"
 #include <stdio.h>
-extern UartRegisters myUartRegisters;
 
 uint8_t lcdScreenDriver_initialise(I2C_Registers* registers, uint8_t lcdScreenI2CAddress, uint8_t columns, uint8_t rows, uint8_t characterDotsType){
 	if(lcdScreenI2CAddress == 0 || columns == 0 || rows == 0 || (characterDotsType != LCDSCREEN_TYPE_5x8DOTS && characterDotsType != LCDSCREEN_TYPE_5x10DOTS)){
