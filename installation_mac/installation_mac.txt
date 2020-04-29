@@ -23,7 +23,8 @@ Installation:
 		xcode-select --install
 
 	avr toolchain:
-		brew install avr-libc
+		brew tap osx-cross/avr
+		brew install avr-gcc
 		brew install avrdude --with-usb
 
 	python:
