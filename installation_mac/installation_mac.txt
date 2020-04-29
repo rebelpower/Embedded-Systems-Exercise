@@ -25,7 +25,7 @@ Installation:
 	avr toolchain:
 		brew tap osx-cross/avr
 		brew install avr-gcc
-		brew install avrdude --with-usb
+		brew install avrdude
 
 	python:
 		https://www.python.org
